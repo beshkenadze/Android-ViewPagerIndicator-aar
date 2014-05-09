@@ -1,4 +1,4 @@
-facebook-api-android-aar
+Android-ViewPagerIndicator-aar
 ========================
 
 Paging indicator widgets compatible with the ViewPager from the Android Support Library and ActionBarSherlock. Originally based on Patrik Åkerfeldt's ViewFlow. 
