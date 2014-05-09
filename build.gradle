@@ -1,0 +1,44 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.10+'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'android-library'
+apply plugin: 'maven'
+
+version '2.4.1'
+group 'com.viewpagerindicator'
+
+dependencies {
+    compile 'com.android.support:support-v4:19+'
+}
+
+android {
+    sourceSets {
+        main {
+            manifest.srcFile 'Android-ViewPagerIndicator/library/AndroidManifest.xml'
+            java.srcDirs = ['Android-ViewPagerIndicator/library/src']
+            res.srcDirs = ['Android-ViewPagerIndicator/library/res']
+        }
+    }
+    compileSdkVersion 19
+    buildToolsVersion '19.0.3'
+}
+
+android.libraryVariants
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: "file://"+System.getProperty("user.home")+"/.m2/repository")
+        }
+    }
+}
